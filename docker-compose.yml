@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: agency-dashboard-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: agency
+      POSTGRES_PASSWORD: agency
+      POSTGRES_DB: agency_dashboard
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agency -d agency_dashboard"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
