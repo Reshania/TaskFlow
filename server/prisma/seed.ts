@@ -205,7 +205,7 @@ async function main() {
           taskId: created.id,
           projectId: created.projectId,
           actorId: created.assigneeId,
-          fromValue: "TODO" ?? underfined,
+          fromValue: "TODO",
           toValue: created.status ?? undefined,
         },
       });
