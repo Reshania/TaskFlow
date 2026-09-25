@@ -215,7 +215,7 @@ async function main() {
         type: "TASK_ASSIGNED",
         title: "Task assigned to you",
         body: `You were assigned "${created.title}"`,
-        userId: created.assigneeId,
+        userId: t.assigneeId,
         taskId: created.id,
         read: created.status === "DONE",
       },
