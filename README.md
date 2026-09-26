@@ -1,4 +1,4 @@
-# Harbor — Real-Time Client Project Dashboard
+# TaskFlow — Real-Time Client Project Dashboard
 
 Internal project desk for a small agency. Admins and project managers run clients, projects, and tasks. Developers update only the work assigned to them. Status changes are persisted as activity and pushed live over Socket.IO.
 
